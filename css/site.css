@@ -46,6 +46,11 @@ body{
 @media (max-width: 575.98px){
   .section{padding:3.25rem 0;}
 }
+/* Reduce initial top gap under sticky header */
+main > .section:first-of-type{padding-top:1.6rem;}
+@media (max-width: 575.98px){
+  main > .section:first-of-type{padding-top:1.25rem;}
+}
 .eyebrow{
   letter-spacing:.12em;
   text-transform:uppercase;
@@ -162,6 +167,18 @@ body{
   transform:rotate(-135deg);
 }
 
+/* Sticky sidebar (e.g. Projects filters) */
+@media (min-width: 992px){
+  .sidebar-sticky{
+    position:sticky;
+    top:6.75rem; /* below sticky header */
+  }
+  .sidebar-sticky .sidebar-panel{
+    max-height:calc(100vh - 7.5rem);
+    overflow:auto;
+  }
+}
+
 /* Buttons */
 .btn-accent{
   --bs-btn-bg:var(--ca-accent);
@@ -208,9 +225,12 @@ body{
   border-left:1px solid var(--ca-border);
   background:
     linear-gradient(180deg, rgba(2,6,23,.02), rgba(2,6,23,.06)),
-    url("../images/hero-architectural.svg");
+    url("../images/hero.webp");
   background-size:cover;
   background-position:center;
+}
+.hero-media--about{
+  background-position: 70% 35%;
 }
 @media (max-width: 991.98px){
   .hero-media{min-height:260px;border-left:none;border-top:1px solid var(--ca-border);}
