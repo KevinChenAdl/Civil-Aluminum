@@ -79,6 +79,34 @@ body{
 
 .nav-cta .btn{border-radius:999px;}
 
+/* Make nav CTAs visually consistent */
+.nav-cta .btn{
+  min-width: 130px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  white-space:nowrap;
+}
+@media (max-width: 1199.98px){
+  .nav-cta .btn{min-width: 118px;}
+}
+
+/* Breadcrumb styling (avoid default bright blue) */
+.breadcrumb{
+  --bs-breadcrumb-divider-color: rgba(15,23,42,.35);
+}
+.breadcrumb a{
+  color: var(--ca-muted);
+  text-decoration: none;
+}
+.breadcrumb a:hover{
+  color: var(--ca-ink);
+  text-decoration: underline;
+}
+.breadcrumb-item.active{
+  color: var(--ca-ink);
+}
+
 /* Buttons */
 .btn-accent{
   --bs-btn-bg:var(--ca-accent);
