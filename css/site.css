@@ -216,6 +216,40 @@ body{
   box-shadow:0 0 0 .25rem rgba(208,138,45,.18);
 }
 
+/* Quote page form actions */
+.quote-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:.75rem;
+  align-items:center;
+}
+.quote-actions .btn{
+  border-radius:999px;
+  padding-left:1.25rem;
+  padding-right:1.25rem;
+}
+@media (max-width: 575.98px){
+  .quote-actions .btn{width:100%;}
+}
+.quote-meta{
+  display:flex;
+  flex-wrap:wrap;
+  gap:.35rem;
+  align-items:center;
+}
+.quote-email{
+  color:var(--ca-accent) !important;
+  font-weight:600;
+  text-decoration:none;
+}
+.quote-email:hover{ text-decoration:underline; }
+.quote-secondary{
+  color:var(--ca-muted);
+  text-decoration:underline;
+  text-underline-offset:.18em;
+}
+.quote-secondary:hover{ color:var(--ca-ink); }
+
 /* Footer */
 footer{
   background:#0b1220;
